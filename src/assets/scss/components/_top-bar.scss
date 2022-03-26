@@ -1,0 +1,18 @@
+@use "variable.scss" as var;
+
+.top-bar {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	padding: var.$top-bar-padding-vertical var.$top-bar-padding-horizontal;
+	width: calc(100% - var.$top-bar-padding-horizontal * 2);
+	height: var.$top-bar-height;
+	background-color: var.$color-transparent;
+	//border-bottom: 5px solid var.$color-black;
+}
+
+.top-bar-after {
+	padding: calc(var.$top-bar-height + var.$top-bar-padding-vertical * 2) 0 0 0;
+}

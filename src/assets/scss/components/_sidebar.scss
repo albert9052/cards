@@ -1,0 +1,58 @@
+@use "variable.scss" as var;
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 30rem;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: var.$color-transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	.sidebar-top-bar {
+		height: var.$top-bar-height;
+		width: calc(100% - var.$top-bar-padding-horizontal * 2);
+		margin: 0;
+		padding: var.$top-bar-padding-vertical var.$top-bar-padding-horizontal;
+		background-color: var.$color-primary;
+		box-shadow: 0 0 0.5rem 0rem var.$color-gray-9;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		border-radius: 0 0 1rem 0;
+	}
+
+	.sidebar-splitter {
+		height: 0.3rem;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		background-color: var.$color-transparent;
+		border: none;
+	}
+
+	.sidebar-options {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		flex-grow: 1;
+		flex-shrink: 1;
+		width: calc(100% - var.$sidebar-options-padding-horizontal * 2);
+		padding: var.$sidebar-options-padding-vertical var.$sidebar-options-padding-horizontal;
+		background-color: var.$color-primary;
+		box-shadow: 0 0 0.5rem 0rem var.$color-gray-9;
+		border-radius: 0 1rem 0 0;
+
+		&-tab-name {
+			padding: 0 2rem 0 8rem;
+			text-align: start;
+		}
+	}
+}

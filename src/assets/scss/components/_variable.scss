@@ -1,0 +1,43 @@
+$color-gray-1: hsla(0, 0%, 92%, 1);
+$color-gray-2: hsla(0, 0%, 87%, 1);
+$color-gray-3: hsla(0, 0%, 83%, 1);
+$color-gray-4: hsla(0, 0%, 77%, 1);
+$color-gray-5: hsla(0, 0%, 70%, 1);
+$color-gray-6: hsla(0, 0%, 63%, 1);
+$color-gray-7: hsla(0, 0%, 48%, 1);
+$color-gray-8: hsla(0, 0%, 36%, 1);
+$color-gray-9: hsla(0, 0%, 20%, 1);
+$color-black: hsla(0, 0%, 0%, 1);
+$color-transparent: hsla(0, 0%, 0%, 0);
+
+$color-primary: $color-gray-6;
+$color-secondary: hsla(35, 69%, 78%, 1);
+$color-tertiary: $color-gray-4;
+$color-body: $color-gray-1;
+$color-gray-overlay: hsla(0, 0%, 77%, 0.6);
+
+$btn-1-margin-horizontal: 0.5rem;
+$btn-1-margin-vertical: 0.5rem;
+$btn-1-padding-horizontal: 1.0rem;
+$btn-1-padding-vertical: 0.8rem;
+$btn-2-margin-horizontal: 0.8rem;
+$btn-2-margin-vertical: 0.8rem;
+$btn-2-padding-horizontal: 1.5rem;
+$btn-2-padding-vertical: 1.0rem;
+
+$top-bar-padding-vertical: 0.5rem;
+$top-bar-padding-horizontal: 1rem;
+$top-bar-height: 4em;
+
+$sidebar-options-padding-vertical: 0.5rem;
+$sidebar-options-padding-horizontal: 1rem;
+
+$icon-shadow: 0 0rem 0.2rem 0.05rem $color-gray-9;
+$icon-shadow-inset: inset 0 0rem 0.2rem 0.05rem $color-gray-9;
+
+$icon-menu-height: 2.0rem;
+$icon-menu-width: 2.6rem;
+$icon-menu-thickness: 0.5rem;
+
+$icon-back-thickness: 0.4rem;
+$icon-back-size: 1.8rem;
