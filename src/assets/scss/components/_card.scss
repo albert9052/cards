@@ -1,0 +1,46 @@
+@use "variable.scss" as var;
+
+.card {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 1rem;
+	background-color: var.$color-gray-4;
+	border-radius: 1rem;
+	box-sizing: border-box;
+	cursor: pointer;
+
+	.card-header {
+		height: var.$card-header-height;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-grow: 0;
+		flex-shrink: 0;
+		background-color: var.$color-transparent;
+		margin: 0;
+		padding: 0 1rem;
+		box-sizing: border-box;
+	}
+
+	.card-body {
+		flex-grow: 1;
+		flex-shrink: 1;
+		margin: 0;
+		padding: 0;
+	}
+
+	.card-footer {
+		margin: 0;
+		padding: 0;
+	}
+
+	.card-avatar-background {
+		
+	}
+}

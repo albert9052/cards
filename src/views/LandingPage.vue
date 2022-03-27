@@ -1,9 +1,9 @@
 <template>
-  <div class="ctn ctn-landing-page-primary top-bar-after">
+  <div class="landing-page top-bar-after">
     <h1>Wanna Say Something?</h1>
-    <div class="ctn ctn-one-line">
+    <div class="one-line">
       <h2>Use</h2>
-      <div class="ctn ctn-landing-page-little-card">
+      <div class="landing-page-little-card">
         <h1 class="logo">CARDs</h1>
       </div>
     </div>

@@ -10,8 +10,8 @@
         <!-- Avatar -->
         <div class="avatar-background">
           <img
-            :src="$store.state.userInfo.avatar"
-            v-if="$store.state.userInfo.avatar"
+            :src="$store.state.userInfo.avatarUrl"
+            v-if="$store.state.userInfo.avatarUrl"
           />
           <div class="icon-avatar" v-else></div>
         </div>

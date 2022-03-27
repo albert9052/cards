@@ -1,0 +1,41 @@
+@use "variable.scss" as var;
+
+.landing-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var.$color-primary;
+	min-height: max(300px, 50vh);
+
+	&-little-card {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 1rem;
+		//border: 3px solid var.$color-gray-9;
+		padding: 0rem 1rem;
+		margin: 1rem;
+		background-color: var.$color-gray-5;
+		height: 10rem;
+		width: 15rem;
+
+		&:after {
+			font-family: 'Patrick Hand', cursive;
+			content: "X";
+			font-weight: bold;
+			font-size: 1.2rem;
+			position: absolute;
+			top: 0.5rem;
+			left: 0.5rem;
+			background-color: var.$color-transparent;
+			border-radius: 2rem;
+			border: 2px solid var.$color-gray-9;
+			height: 1.6rem;
+			width: 1.6rem;
+			padding: 0.1rem;
+			margin: 0;
+		}
+	}
+}

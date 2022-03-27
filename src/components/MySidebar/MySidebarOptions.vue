@@ -6,7 +6,7 @@
       class="btn btn-sidebar"
       @click="$store.dispatch('changeRoute', tab.route)"
     >
-      <h4 class="sidebar-options-tab-name">{{ tab.name }}</h4>
+      <h5 class="sidebar-options-tab-name">{{ tab.name }}</h5>
     </button>
   </div>
 </template>

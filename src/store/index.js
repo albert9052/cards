@@ -23,6 +23,71 @@ export default createStore({
       },
     ],
     currentRoute: "",
+    allCards: [
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+      {
+        username: "FluffyPony",
+        avatarUrl: "",
+        content:
+          "This is an artical. xxxxxx xxxxxxx x xxxxx xxxxxxxxx xxxxxx xxx xxxx xxxxxxx xxx xxx xxxxx xx xxxxxxxxx. ",
+        hearts: 0,
+      },
+    ],
   },
   getters: {},
   mutations: {

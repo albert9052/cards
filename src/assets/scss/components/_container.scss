@@ -23,15 +23,6 @@
 		}
 	}
 
-	&.ctn-landing-page-primary {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		background-color: var.$color-primary;
-		min-height: max(300px, 50vh);
-	}
-
 	&.ctn-wave-and-button {
 		position: relative;
 		margin: 0;
@@ -44,34 +35,29 @@
 		justify-content: center;
 	}
 
-	&.ctn-landing-page-little-card {
-		position: relative;
+	&.ctn-cards {
 		display: flex;
+		justify-content: flex-start;
 		align-items: center;
-		justify-content: center;
-		border-radius: 1rem;
-		//border: 3px solid var.$color-gray-9;
-		padding: 0rem 1rem;
-		margin: 1rem;
-		background-color: var.$color-gray-5;
-		height: 10rem;
-		width: 15rem;
+		flex-wrap: wrap;
+		flex-shrink: 1;
+		max-width: 60rem;
 
-		&:after {
-			font-family: 'Patrick Hand', cursive;
-			content: "X";
-			font-weight: bold;
-			font-size: 1.2rem;
-			position: absolute;
-			top: 0.5rem;
-			left: 0.5rem;
+		.ctn-card-wrapper {
+			width: 33.333%;
+			padding: 0.5rem;
+			box-sizing: border-box;
 			background-color: var.$color-transparent;
-			border-radius: 2rem;
-			border: 2px solid var.$color-gray-9;
-			height: 1.6rem;
-			width: 1.6rem;
-			padding: 0.1rem;
-			margin: 0;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.ctn {
+		&.ctn-cards {
+			.ctn-card-wrapper {
+				width: 50%;
+			}
 		}
 	}
 }
