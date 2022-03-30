@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page top-bar-after">
     <h1>Wanna Say Something?</h1>
-    <div class="one-line">
+    <div class="ctn ctn-one-line">
       <h2>Use</h2>
       <div class="landing-page-little-card">
         <h1 class="logo">CARDs</h1>

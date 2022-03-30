@@ -3,10 +3,9 @@
     <MyCardHeader
       :username="cardInformation.username"
       :avatarUrl="cardInformation.avatarUrl"
-      :hearts="cardInformation.hearts"
     />
     <MyCardBody :content="cardInformation.content" />
-    <MyCardFooter />
+    <MyCardFooter :cardInformation="cardInformation" />
   </div>
 </template>
 

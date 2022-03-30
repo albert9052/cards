@@ -1,5 +1,9 @@
 <template>
-  <div class="gray-overlay"></div>
+  <div
+    class="gray-overlay"
+    @click="$store.dispatch('closeEverything')"
+    v-show="$store.state.showGrayOverlay"
+  ></div>
 </template>
 
 <script>

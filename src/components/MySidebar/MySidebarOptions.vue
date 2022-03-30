@@ -4,7 +4,7 @@
       v-for="(tab, index) in $store.state.tabs"
       :key="index"
       class="btn btn-sidebar"
-      @click="$store.dispatch('changeRoute', tab.route)"
+      @click="$store.dispatch('changeRoute', tab)"
     >
       <h5 class="sidebar-options-tab-name">{{ tab.name }}</h5>
     </button>

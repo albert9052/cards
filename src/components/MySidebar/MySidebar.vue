@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" v-show="$store.state.sidebarOpened">
     <MySidebarTopBar />
     <hr class="sidebar-splitter" />
     <MySidebarOptions />

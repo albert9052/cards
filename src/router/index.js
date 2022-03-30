@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingPage from "@/views/LandingPage.vue";
-import AllCards from "@/views/AllCards.vue";
+import CardsPage from "@/views/CardsPage.vue";
 
 const routes = [
   {
@@ -16,7 +16,12 @@ const routes = [
   {
     path: "/allcards",
     name: "AllCards",
-    component: AllCards,
+    component: CardsPage,
+  },
+  {
+    path: "/mycards",
+    name: "MyCards",
+    component: CardsPage,
   },
 ];
 

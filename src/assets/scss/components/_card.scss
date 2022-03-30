@@ -2,6 +2,7 @@
 
 .card {
 	display: flex;
+	position: relative;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
@@ -12,19 +13,19 @@
 	background-color: var.$color-gray-4;
 	border-radius: 1rem;
 	box-sizing: border-box;
-	cursor: pointer;
+	box-shadow: 0 0.3rem 0.3rem var.$color-gray-9;
 
 	.card-header {
 		height: var.$card-header-height;
 		width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: center;
 		flex-grow: 0;
 		flex-shrink: 0;
 		background-color: var.$color-transparent;
 		margin: 0;
-		padding: 0 1rem;
+		padding: 0;
 		box-sizing: border-box;
 	}
 
@@ -38,6 +39,16 @@
 	.card-footer {
 		margin: 0;
 		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		box-sizing: border-box;
+
+		&-hearts {
+			margin: 0;
+			padding: 0;
+		}
 	}
 
 	.card-avatar-background {

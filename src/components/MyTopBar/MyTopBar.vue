@@ -13,7 +13,7 @@
             :src="$store.state.userInfo.avatarUrl"
             v-if="$store.state.userInfo.avatarUrl"
           />
-          <div class="icon-avatar" v-else></div>
+          <div class="icon-avatar" style="--size: 2.6rem" v-else></div>
         </div>
         <!-- /Avatar/ -->
         <!-- Username -->

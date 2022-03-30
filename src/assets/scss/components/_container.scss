@@ -1,6 +1,8 @@
 @use "variable.scss" as var;
 
 .ctn {
+	position: relative;
+
 	&.ctn-components {
 		&-left {
 			display: flex;

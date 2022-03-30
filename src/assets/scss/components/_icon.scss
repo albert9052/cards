@@ -2,12 +2,13 @@
 
 .icon {
 	&-avatar {
+		--size: 2.6rem;
 		position: relative;
-		height: 2.6rem;
-		width: 2.6rem;
-		border-radius: 2rem;
+		height: var(--size);
+		width: var(--size);
+		border-radius: var(--size);
 		background-color: var.$color-body;
-		margin: 0rem 0.5rem;
+		margin: 0 calc(var(--size) * 0.5 / 2.6) 0 0;
 		padding: 0;
 		display: flex;
 		flex-direction: column;
@@ -19,11 +20,11 @@
 		&:after {
 			content: "";
 			position: absolute;
-			top: 0.4rem;
+			top: calc(var(--size) * 0.4 / 2.6);
 			margin: 0 auto;
-			height: 1.1rem;
-			width: 1.1rem;
-			border-radius: 1.5rem;
+			height: calc(var(--size) * 1.1 / 2.6);
+			width: calc(var(--size) * 1.1 / 2.6);
+			border-radius: calc(var(--size) * 1.5 / 2.6);
 			background-color: var.$color-primary;
 			box-shadow: var.$icon-shadow;
 		}
@@ -31,11 +32,11 @@
 		&:before {
 			content: "";
 			position: absolute;
-			top: 1.8rem;
+			top: calc(var(--size) * 1.8 / 2.6);
 			margin: 0 auto;
-			height: 2rem;
-			width: 2rem;
-			border-radius: 2rem;
+			height: calc(var(--size) * 2 / 2.6);
+			width: calc(var(--size) * 2 / 2.6);
+			border-radius: calc(var(--size) * 2 / 2.6);
 			background-color: var.$color-primary;
 			box-shadow: var.$icon-shadow;
 		}
@@ -92,6 +93,79 @@
 			position: absolute;
 			margin: auto auto;
 			transform: rotate(135deg);
+		}
+	}
+
+	&-heart {
+		background-color: var.$color-gray-9;
+		width: var.$icon-heart-size;
+		height: var.$icon-heart-size;
+		transform: rotate(135deg);
+		margin: 0.5rem;
+		padding: 0;
+
+		&:after {
+			background-color: var.$color-gray-9;
+			content: "";
+			width: var.$icon-heart-size;
+			height: var.$icon-heart-size;
+			border-radius: var.$icon-heart-size;
+			position: absolute;
+			right: 0;
+			top: calc(var.$icon-heart-size / 2);
+		}
+
+		&:before {
+			background-color: var.$color-gray-9;
+			content: "";
+			width: var.$icon-heart-size;
+			height: var.$icon-heart-size;
+			border-radius: var.$icon-heart-size;
+			position: absolute;
+			right: calc(var.$icon-heart-size / 2);
+			top: 0;
+		}
+	}
+
+	&-plus {
+		position: relative;
+		background-color: var.$color-gray-1;
+		width: 0.3rem;
+		height: 2rem;
+		margin: 0 0.85rem;
+
+		&:after {
+			background-color: var.$color-gray-1;
+			content: "";
+			height: 0.3rem;
+			width: 2rem;
+			position: absolute;
+			top: 0.85rem;
+			right: -0.85rem;
+		}
+	}
+
+	&-close {
+		position: relative;
+		background-color: var.$color-gray-8;
+		width: 0.3rem;
+		height: 2rem;
+		margin: 0 0.85rem;
+		transform: rotate(45deg);
+		padding: 0;
+		border: none;
+
+		&:after {
+			background-color: var.$color-gray-8;
+			content: "";
+			height: 0.3rem;
+			width: 2rem;
+			position: absolute;
+			top: 0.85rem;
+			right: -0.85rem;
+			margin: 0;
+			padding: 0;
+			border: none;
 		}
 	}
 }

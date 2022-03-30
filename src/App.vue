@@ -1,14 +1,16 @@
 <template>
   <MyTopBar />
   <router-view />
-  <MyGrayOverlay v-if="$store.state.sidebarOpened" />
-  <MySidebar v-if="$store.state.sidebarOpened" />
+  <MyGrayOverlay />
+  <MyPopUpWindow />
+  <MySidebar />
 </template>
 
 <script>
 import MyTopBar from "./components/MyTopBar/MyTopBar.vue";
 import MySidebar from "./components/MySidebar/MySidebar.vue";
 import MyGrayOverlay from "./components/MyGrayOverlay/MyGrayOverlay.vue";
+import MyPopUpWindow from "@/components/MyPopUpWindow/MyPopUpWindow.vue";
 
 export default {
   name: "App",
@@ -16,6 +18,7 @@ export default {
     MyTopBar,
     MySidebar,
     MyGrayOverlay,
+    MyPopUpWindow,
   },
 };
 </script>

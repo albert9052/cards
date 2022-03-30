@@ -4,16 +4,12 @@
       <!-- Avatar -->
       <div class="card-avatar-background">
         <img :src="avatarUrl" v-if="avatarUrl" />
-        <div class="card-icon-avatar" v-else></div>
+        <div class="icon-avatar" style="--size: 2rem" v-else></div>
       </div>
       <!-- /Avatar/ -->
       <!-- Username -->
       <h6>{{ username }}</h6>
       <!-- /Username/ -->
-    </div>
-    <div class="card-hearts">
-      <div class="card-icon-heart"></div>
-      <h6>{{ hearts }}</h6>
     </div>
   </div>
 </template>
@@ -24,7 +20,6 @@ export default {
   props: {
     username: String,
     avatarUrl: String,
-    hearts: Number,
   },
 };
 </script>
