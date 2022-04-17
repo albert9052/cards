@@ -1,0 +1,133 @@
+@use "variable.scss" as var;
+
+.ctn {
+  position: relative;
+
+  &.ctn-components {
+    &-left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 0;
+      height: fit-content;
+      width: fit-content;
+    }
+
+    &-2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      height: fit-content;
+      width: fit-content;
+    }
+  }
+
+  &.ctn-wave-and-button {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    .ctn-wave-sign-up {
+      position: absolute;
+      top: 30%;
+      right: 10%;
+      display: flex;
+      flex-direction: column;
+
+      .btn {
+        margin: 0.5rem;
+      }
+    }
+  }
+
+  &.ctn-one-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.ctn-cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    max-width: 60rem;
+
+    .ctn-card-wrapper {
+      width: 33.333%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      background-color: var.$color-transparent;
+    }
+  }
+
+  &.ctn-username-and-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 13rem;
+  }
+
+  &.ctn-input-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0.5rem;
+    height: 3rem;
+
+    & .ctn-input-field-field-name {
+      position: absolute;
+      right: 55%;
+      margin: 0 1rem;
+    }
+
+    & .ctn-input-field-input {
+      position: absolute;
+      left: 45%;
+      padding: 0.5rem;
+      background-color: var.$color-gray-3;
+      border-radius: 0.5rem;
+      box-shadow: inset 0 0.1rem 0.2rem var.$color-gray-9;
+      border: none;
+      box-sizing: border-box;
+      width: 15rem;
+
+      &:focus,
+      &:active {
+        background-color: var.$color-gray-2;
+        outline: none;
+        box-shadow: inset 0 0.05rem 0.1rem var.$color-gray-9;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .ctn {
+    &.ctn-cards {
+      .ctn-card-wrapper {
+        width: 50%;
+      }
+    }
+
+    &.ctn-username-and-password {
+      height: 12rem;
+    }
+
+    &.ctn-input-field {
+      & .ctn-input-field-input {
+        width: 10rem;
+      }
+    }
+  }
+}

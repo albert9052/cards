@@ -1,0 +1,48 @@
+@use "variable.scss" as var;
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: var.$top-bar-padding-vertical var.$top-bar-padding-horizontal;
+  width: 100%;
+  height: var.$top-bar-height;
+  background-color: var.$color-primary;
+  box-sizing: border-box;
+  //border-bottom: 5px solid var.$color-black;
+}
+
+.top-bar-after {
+  padding: var.$top-bar-height;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .top-bar {
+    padding: var.$top-bar-padding-vertical-small
+      var.$top-bar-padding-horizontal-small;
+
+    & .icon-avatar {
+      margin: 0;
+    }
+
+    & .top-bar-username {
+      display: none;
+    }
+
+    & .top-bar-button {
+      &-menu {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+  .top-bar-after {
+    padding: calc(var.$top-bar-height + var.$top-bar-padding-vertical-small * 2)
+      0 0 0;
+  }
+}

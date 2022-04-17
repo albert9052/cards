@@ -1,0 +1,71 @@
+@use "variable.scss" as var;
+
+.sign-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  & .sign-in-page-wave-and-button {
+    height: 190px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    & .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50rem;
+    }
+
+    & .btn-wave-sign-up {
+      position: absolute;
+      top: 30%;
+      right: 10%;
+    }
+  }
+}
+
+.sign-up-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  & .sign-up-page-wave-and-button {
+    height: 190px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    & .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50rem;
+    }
+
+    & .btn-wave-sign-up {
+      position: absolute;
+      top: 30%;
+      right: 10%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .sign-in-page {
+    & .sign-in-page-wave-and-button {
+      & .btn-wave-sign-up {
+        top: 30%;
+      }
+    }
+  }
+}
