@@ -126,6 +126,10 @@ export default createStore({
     uploading: {
       avatarURL: false,
       avatarFile: false,
+      card: false,
+    },
+    deleting: {
+      card: false,
     },
     title: "",
   },
@@ -199,6 +203,12 @@ export default createStore({
     },
     changeUploadingAvatarFile(state, newValue) {
       state.uploading.avatarFile = newValue;
+    },
+    changeUploadingCard(state, newValue) {
+      state.uploading.card = newValue;
+    },
+    changeDeletingCard(state, newValue) {
+      state.deleting.card = newValue;
     },
     changeTitle(state, newTitle) {
       state.title = newTitle;
@@ -454,6 +464,7 @@ export default createStore({
       commit("changeTempAttachmentFile", null);
     },
     async uploadCard({ state, commit, dispatch }) {
+      commit("changeUploadingCard", true);
       let formData = new FormData();
       formData.append("attachment", state.tempParameters.attachmentFile);
       formData.append("card", "new");
@@ -482,8 +493,10 @@ export default createStore({
         //console.log(error.response);
         alert(error.response.data["error"]);
       }
+      commit("changeUploadingCard", false);
     },
-    async deleteCard({ dispatch }, cardID) {
+    async deleteCard({ commit, dispatch }, cardID) {
+      commit("changeUploadingCard", true);
       try {
         await axios({
           method: "DELETE",
@@ -505,6 +518,7 @@ export default createStore({
       } catch (error) {
         alert(error.response.data["error"]);
       }
+      commit("changeUploadingCard", false);
     },
     async getAllCards({ commit }) {
       commit("changeCards", []);

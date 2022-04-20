@@ -3,6 +3,7 @@
     class="btn btn-1 btn-primary"
     @click="$store.dispatch('uploadCard')"
     v-show="$store.state.mode == 'edit'"
+    :disabled="$store.state.uploading.card"
   >
     Done!
   </button>
