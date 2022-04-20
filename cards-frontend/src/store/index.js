@@ -298,7 +298,7 @@ export default createStore({
         commit("changeSignedIn", false);
         commit("changeUsername", "");
         commit("changeAvatarURL", "");
-        console.log(error.response);
+        //console.log(error.response);
         return false;
       }
     },
@@ -318,7 +318,7 @@ export default createStore({
         commit("changeSignedIn", false);
         commit("changeUsername", "");
         commit("changeAvatarURL", "");
-        console.log(error.response);
+        //console.log(error.response);
       }
     },
     async signUp({ state, commit, dispatch }) {
@@ -459,7 +459,7 @@ export default createStore({
       formData.append("card", "new");
       formData.append("content", state.cardToShow.content);
       try {
-        let response = await axios({
+        await axios({
           method: "POST",
           url: "/api/RestController.php",
           data: formData,
@@ -476,10 +476,10 @@ export default createStore({
         } else if (router.currentRoute._value.fullPath == "/mycards") {
           dispatch("getMyCards");
         }
-        console.log(response);
+        //console.log(response);
         alert("Adding card success!");
       } catch (error) {
-        console.log(error.response);
+        //console.log(error.response);
         alert(error.response.data["error"]);
       }
     },
@@ -584,7 +584,7 @@ export default createStore({
         alert(
           "Upload avatar failed! Please sign in again and try again later!"
         );
-        console.log(error.response.data["error"]);
+        //console.log(error.response.data["error"]);
       }
       commit("changeUploadingAvatarFile", false);
     },
@@ -608,7 +608,7 @@ export default createStore({
         alert(
           "Upload avatar failed! Please sign in again and try again later!"
         );
-        console.log(error.response.data["error"]);
+        //console.log(error.response.data["error"]);
       }
       commit("changeUploadingAvatarURL", false);
       commit("changeTempAvatarURL", "");
@@ -637,7 +637,7 @@ export default createStore({
           .split(".")[1]
           .split(";")[0];
         fileLink.href = fileURL;
-        console.log(filename + extension);
+        //console.log(filename + extension);
         fileLink.setAttribute("download", filename + "." + extension);
         document.body.appendChild(fileLink);
 
@@ -646,7 +646,7 @@ export default createStore({
         alert(
           "Download attachment failed! Please sign in again and try again later!"
         );
-        console.log(error.response.data["error"]);
+        //console.log(error.response.data["error"]);
       }
     },
     async getTitle({ commit }) {
@@ -663,7 +663,7 @@ export default createStore({
         });
         commit("changeTitle", response.data["title"]);
       } catch (error) {
-        console.log(error.response.data["error"]);
+        //console.log(error.response.data["error"]);
       }
     },
     changeTitle({ commit }, newTitle) {

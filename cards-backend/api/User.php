@@ -126,7 +126,7 @@ class User
                 $headers = array('alg' => 'HS256', 'typ' => 'JWT');
                 $payload = array('username'=>$goodUsername, 'exp'=>(time() + 3600));
                 $jwt = $jwtHandler->generate_jwt($headers, $payload);
-                setcookie('jwt', $jwt, null, null, null, false, true); // remember $secure=true
+                setcookie('jwt', $jwt, null, null, null, true, true);
                 return true;
             }
         }
