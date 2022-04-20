@@ -171,7 +171,8 @@ class CardRestHandler extends SimpleRest
         //$requestContentType = $_SERVER['HTTP_ACCEPT'];
         //$this->setHttpHeaders($requestContentType, $statusCode);
         $this->setHttpHeadersForDownloadingFile($statusCode, $rawData);
-        //echo $rawData;
+        ob_clean();
+        flush();
 
         readFile($rawData);
     }
