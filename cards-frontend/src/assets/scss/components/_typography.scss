@@ -111,3 +111,14 @@ h {
 .text-align-left {
 	text-align: left;
 }
+
+input {
+
+	&[type="text"], &[type="password"] {
+		font-weight: 500;
+		font-size: 1.25rem;
+		letter-spacing: 0.001875rem;
+		margin: 0.2rem;
+		padding: 0;
+	}
+}

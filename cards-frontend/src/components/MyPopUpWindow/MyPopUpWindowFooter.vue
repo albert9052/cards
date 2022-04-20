@@ -3,6 +3,17 @@
     <div class="ctn ctn-components-2">
       <MyPopUpWindowFooterButtonAttachFile />
       <MyPopUpWindowFooterButtonDownloadFile />
+      <h5
+        v-show="
+          $store.state.mode == 'edit' && !$store.state.cardToShow.attachmentURL
+        "
+      >
+        {{
+          $store.state.tempParameters.attachmentFile
+            ? $store.state.tempParameters.attachmentFile.name
+            : "<-- Please choose a file"
+        }}
+      </h5>
     </div>
     <div>
       <MyPopUpWindowFooterButtonConfirm />

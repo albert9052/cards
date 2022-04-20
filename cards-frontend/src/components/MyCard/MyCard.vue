@@ -2,7 +2,7 @@
   <div class="card">
     <MyCardHeader
       :username="cardInformation.username"
-      :avatarUrl="cardInformation.avatarUrl"
+      :avatarURL="cardInformation.avatarURL"
     />
     <MyCardBody :content="cardInformation.content" />
     <MyCardFooter :cardInformation="cardInformation" />

@@ -1,6 +1,6 @@
 <template>
   <div class="landing-page top-bar-after">
-    <h1>Wanna Say Something?</h1>
+    <h1>{{ $store.state.title }}</h1>
     <div class="ctn ctn-one-line">
       <h2>Use</h2>
       <div class="landing-page-little-card">
@@ -28,5 +28,20 @@
 <script>
 export default {
   name: "LandingPage",
+  async mounted() {
+    if (this.$store.state.signedIn) {
+      this.$store.dispatch("changeRoute", {
+        route: "/allcards",
+        name: "All Cards",
+      });
+    }
+    if (await this.$store.dispatch("verifyJWT")) {
+      this.$store.dispatch("changeRoute", {
+        route: "/allcards",
+        name: "All Cards",
+      });
+    }
+    this.$store.dispatch("getTitle");
+  },
 };
 </script>

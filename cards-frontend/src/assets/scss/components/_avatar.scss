@@ -1,0 +1,13 @@
+@use "variable.scss" as var;
+
+.avatar {
+		--size: 2.6rem;
+		height: var(--size);
+		width: var(--size);
+		border-radius: var(--size);
+		border: 2px solid var.$color-gray-7;
+		margin: 0 calc(var(--size) * 0.5 / 2.6) 0 0;
+		padding: 0;
+		overflow: hidden;
+		box-sizing: border-box;
+	}

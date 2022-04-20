@@ -20,6 +20,9 @@ export default {
     MyGrayOverlay,
     MyPopUpWindow,
   },
+  mounted() {
+    this.$store.dispatch("verifyJWT");
+  },
   watch: {
     $route(to) {
       this.$store.dispatch("updateCurrentRoute", to.fullPath.substring(1));

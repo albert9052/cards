@@ -16,6 +16,7 @@
 		justify-content: center;
 		overflow: hidden;
 		box-shadow: var.$icon-shadow-inset;
+		box-sizing: border-box;
 
 		&:after {
 			content: "";

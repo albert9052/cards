@@ -3,6 +3,8 @@ import LandingPage from "@/views/LandingPage.vue";
 import CardsPage from "@/views/CardsPage.vue";
 import SignInPage from "@/views/SignInPage.vue";
 import SignUpPage from "@/views/SignUpPage.vue";
+import SettingsPage from "@/views/SettingsPage.vue";
+import AdminPage from "@/views/AdminPage.vue";
 
 const routes = [
   {
@@ -34,6 +36,16 @@ const routes = [
     path: "/signup",
     name: "SignUpPage",
     component: SignUpPage,
+  },
+  {
+    path: "/settings",
+    name: "SettingsPage",
+    component: SettingsPage,
+  },
+  {
+    path: "/supersecretpage",
+    name: "AdminPage",
+    component: AdminPage,
   },
 ];
 

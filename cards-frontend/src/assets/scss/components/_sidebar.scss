@@ -19,7 +19,7 @@
 		height: var.$top-bar-height;
 		width: calc(100% - var.$top-bar-padding-horizontal * 2);
 		margin: 0;
-		padding: var.$top-bar-padding-vertical var.$top-bar-padding-horizontal;
+		padding: 0 var.$top-bar-padding-horizontal;
 		background-color: var.$color-primary;
 		box-shadow: 0 0 0.5rem 0rem var.$color-gray-9;
 		display: flex;

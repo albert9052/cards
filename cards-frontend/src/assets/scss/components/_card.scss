@@ -30,10 +30,21 @@
   }
 
   .card-body {
+		width: 100%;
     flex-grow: 1;
     flex-shrink: 1;
     margin: 0;
     padding: 0;
+
+		&-content {
+			display: -webkit-box;
+			height: 4.8rem;
+			width: 100%;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			overflow-wrap: break-word;
+		}
   }
 
   .card-footer {
@@ -59,6 +70,10 @@
 
   .card-avatar-background {
   }
+
+	&.card-dark {
+		background-color: var.$color-primary;
+	}
 }
 
 @media (max-width: 700px) {

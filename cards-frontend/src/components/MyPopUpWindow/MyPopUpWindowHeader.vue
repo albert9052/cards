@@ -6,8 +6,12 @@
       <!-- Avatar -->
       <div class="avatar-background">
         <img
-          :src="$store.state.cardToShow.avatarUrl"
-          v-if="$store.state.cardToShow.avatarUrl"
+          :src="
+            'http://localhost:8000/api/' + $store.state.cardToShow.avatarURL
+          "
+          v-if="$store.state.cardToShow.avatarURL"
+          class="avatar"
+          style="--size: 2.3rem"
         />
         <div class="icon-avatar" style="--size: 2.3rem" v-else></div>
       </div>

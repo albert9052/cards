@@ -1,0 +1,25 @@
+@use "variable.scss" as var;
+
+.settings-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+	input[type="file"] {
+		display: none;
+	}
+
+	&-input-avatar-url {
+		border: none;
+		border-bottom: 2px solid var.$color-gray-8;
+		background-color: var.$color-transparent;
+		width: 20rem;
+
+		&:active, &:focus, &:focus-visible {
+			border-bottom: 3px solid var.$color-gray-9;
+			outline: none;
+			outline-offset: unset;
+		}
+	}
+}

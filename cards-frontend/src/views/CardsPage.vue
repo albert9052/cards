@@ -36,6 +36,21 @@ export default {
         break;
       }
     }
+
+    if (this.$route.fullPath == "/allcards") {
+      this.$store.dispatch("getAllCards");
+    } else if (this.$route.fullPath == "/mycards") {
+      this.$store.dispatch("getMyCards");
+    }
+  },
+  watch: {
+    $route(to) {
+      if (to.fullPath == "/allcards") {
+        this.$store.dispatch("getAllCards");
+      } else if (to.fullPath == "/mycards") {
+        this.$store.dispatch("getMyCards");
+      }
+    },
   },
 };
 </script>

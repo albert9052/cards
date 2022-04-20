@@ -1,15 +1,25 @@
 <template>
   <div class="pop-up-window-body">
-    <p v-show="$store.state.mode == 'read'">
-      {{ $store.state.cardToShow.content }}
-    </p>
-    <textarea v-model="content" v-show="$store.state.mode == 'edit'"></textarea>
+    <BBCodeTranslator
+      v-show="$store.state.mode == 'read'"
+      :content="$store.state.cardToShow.content"
+    />
+    <textarea
+      class="pop-up-window-body-textarea"
+      v-model="content"
+      v-show="$store.state.mode == 'edit'"
+    ></textarea>
   </div>
 </template>
 
 <script>
+import BBCodeTranslator from "@/components/BBCodeTranslator/BBCodeTranslator.vue";
+
 export default {
   name: "MyPopUpWindowBody",
+  components: {
+    BBCodeTranslator,
+  },
   computed: {
     content: {
       get() {

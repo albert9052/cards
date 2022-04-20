@@ -57,7 +57,8 @@
     align-items: center;
     flex-wrap: wrap;
     flex-shrink: 1;
-    max-width: 60rem;
+    max-width: 80rem;
+		min-width: 40rem;
 
     .ctn-card-wrapper {
       width: 33.333%;
@@ -110,11 +111,49 @@
       }
     }
   }
+
+	&.ctn-settings {
+
+		&-avatar {
+
+			&-file {
+				margin: 1rem 0 0 0;
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				align-items: start;
+				flex-direction: column;
+			}
+
+			&-link {
+				margin: 1rem 0 0 0;
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				align-items: start;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+@media (min-width: 1000px) {
+  .ctn {
+    &.ctn-cards {
+			min-width: 60rem;
+
+      .ctn-card-wrapper {
+        width: 25%;
+      }
+    }
+  }
 }
 
 @media (max-width: 700px) {
   .ctn {
     &.ctn-cards {
+			min-width: 20rem;
+
       .ctn-card-wrapper {
         width: 50%;
       }

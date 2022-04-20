@@ -10,6 +10,11 @@
 		border-radius: 0.5rem;
 		padding: 0.6rem 1.2rem;
 		margin: 1rem;
+
+		&:disabled {
+			color: var.$color-gray-8;
+			background-color: var.$color-secondary-disabled;
+		}
 	}
 
 	&.btn-secondary {
@@ -19,6 +24,11 @@
 		border-radius: 0.5rem;
 		padding: 0.6rem 1.2rem;
 		margin: 1rem;
+
+		&:disabled {
+			color: var.$color-gray-8;
+			background-color: var.$color-tertiary-disabled;
+		}
 	}
 
 	&.btn-1 {

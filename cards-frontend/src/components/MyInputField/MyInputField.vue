@@ -4,7 +4,7 @@
     <input
       class="ctn-input-field-input"
       :type="type"
-      :placeholder="placeHolder"
+      :placeholder="placeholder"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
     />

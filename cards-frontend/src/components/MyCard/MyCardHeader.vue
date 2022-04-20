@@ -3,7 +3,12 @@
     <div class="ctn ctn-components-2">
       <!-- Avatar -->
       <div class="card-avatar-background">
-        <img :src="avatarUrl" v-if="avatarUrl" />
+        <img
+          :src="'http://localhost:8000/api/' + avatarURL"
+          v-if="avatarURL"
+          class="avatar"
+          style="--size: 2rem"
+        />
         <div class="icon-avatar" style="--size: 2rem" v-else></div>
       </div>
       <!-- /Avatar/ -->
@@ -19,7 +24,7 @@ export default {
   name: "MyCardHeader",
   props: {
     username: String,
-    avatarUrl: String,
+    avatarURL: String,
   },
 };
 </script>

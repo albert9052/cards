@@ -11,7 +11,7 @@
 export default {
   name: "MyCardFooterButtonEdit",
   props: {
-    cardInformation: Object,
+    cardInformation: null,
   },
 };
 </script>
