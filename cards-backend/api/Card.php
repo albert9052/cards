@@ -97,8 +97,8 @@ class Card
 
             $fileName = bin2hex(random_bytes(20)) . '.' . $fileExtension;
 
-            //$uploadPath = '/home/fluffypony/uploadedFile/';
             $uploadPath = '/home/albert/uploadedFile/';
+            //$uploadPath = '/home/albert/uploadedFile/';
 
             while (file_exists($uploadPath . $fileName)) {
                 $fileName = bin2hex(random_bytes(20)) . '.' . $fileExtension;

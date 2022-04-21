@@ -175,7 +175,7 @@ class CardRestHandler extends SimpleRest
         flush();
 
         readFile($rawData);
-        exit;
+        exit();
     }
 
     public function notFound()

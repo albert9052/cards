@@ -20,7 +20,7 @@ class SimpleRest
         $statusMessage = $this -> getHttpStatusMessage($statusCode);
 
         header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
+        header('Content-Type: ' . mime_content_type($filePath));
         header('Content-Disposition: attachment; filename=' . basename($filePath));
         header('Content-Transfer-Encoding: binary');
         header('Expires: 0');

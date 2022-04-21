@@ -629,33 +629,21 @@ export default createStore({
     },
     async downloadAttachment({ state }) {
       try {
-        let response = await axios({
+        fetch("/api/RestController.php", {
           method: "POST",
-          url: "/api/RestController.php",
-          data: {
-            card: "downloadAttachment",
-            cardID: state.cardToShow.cardID,
-          },
           headers: {
             "Content-Type": "application/json",
           },
-        });
-
-        var fileURL = window.URL.createObjectURL(new Blob([response.data]));
-        var fileLink = document.createElement("a");
-
-        let filename = response.headers["content-disposition"]
-          .split("filename=")[1]
-          .split(".")[0];
-        let extension = response.headers["content-disposition"]
-          .split(".")[1]
-          .split(";")[0];
-        fileLink.href = fileURL;
-        //console.log(filename + extension);
-        fileLink.setAttribute("download", filename + "." + extension);
-        document.body.appendChild(fileLink);
-
-        fileLink.click();
+          body: JSON.stringify({
+            card: "downloadAttachment",
+            cardID: state.cardToShow.cardID,
+          }),
+        })
+          .then((res) => res.blob())
+          .then((blob) => {
+            var file = window.URL.createObjectURL(blob);
+            window.location.assign(file);
+          });
       } catch (error) {
         alert(
           "Download attachment failed! Please sign in again and try again later!"
