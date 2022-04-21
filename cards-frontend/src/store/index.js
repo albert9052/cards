@@ -497,7 +497,8 @@ export default createStore({
         alert("Adding card success!");
       } catch (error) {
         //console.log(error.response);
-        alert(error.response.data["error"]);
+        //alert(error.response.data["error"]);
+				alert("Uploading card failed! Please try to sign in or reduce your file size to less than 1000,000 bytes. ");
       }
       commit("changeUploadingCard", false);
     },

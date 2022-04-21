@@ -4,7 +4,7 @@
       <!-- Avatar -->
       <div class="card-avatar-background">
         <img
-          :src="'http://localhost:8000/api/' + avatarURL"
+          :src="'api/' + avatarURL"
           v-if="avatarURL"
           class="avatar"
           style="--size: 2rem"

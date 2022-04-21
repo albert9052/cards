@@ -10,9 +10,7 @@
         <!-- Avatar -->
         <div class="avatar-background">
           <img
-            :src="
-              'http://localhost:8000/api/' + $store.state.userInfo.avatarURL
-            "
+            :src="'api/' + $store.state.userInfo.avatarURL"
             v-if="$store.state.userInfo.avatarURL"
             class="avatar"
             style="--size: 2.6rem"
