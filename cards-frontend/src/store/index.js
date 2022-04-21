@@ -128,6 +128,9 @@ export default createStore({
       avatarFile: false,
       card: false,
     },
+    downloading: {
+      attachment: false,
+    },
     deleting: {
       card: false,
     },
@@ -206,6 +209,9 @@ export default createStore({
     },
     changeUploadingCard(state, newValue) {
       state.uploading.card = newValue;
+    },
+    changeDownloadingAttachment(state, newValue) {
+      state.downloading.attachment = newValue;
     },
     changeDeletingCard(state, newValue) {
       state.deleting.card = newValue;
@@ -627,7 +633,8 @@ export default createStore({
       commit("changeUploadingAvatarURL", false);
       commit("changeTempAvatarURL", "");
     },
-    async downloadAttachment({ state }) {
+    async downloadAttachment({ state, commit }) {
+      commit("changeDownloadingAttachment", true);
       try {
         fetch("/api/RestController.php", {
           method: "POST",
@@ -650,6 +657,7 @@ export default createStore({
         );
         //console.log(error.response.data["error"]);
       }
+      commit("changeDownloadingAttachment", false);
     },
     async getTitle({ commit }) {
       try {
