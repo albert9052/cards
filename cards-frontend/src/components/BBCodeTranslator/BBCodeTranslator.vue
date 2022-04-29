@@ -13,7 +13,7 @@ export default {
   computed: {
     compiledContent() {
       let xss = require("xss");
-      return bbCodeParser.parse(xss(this.content));
+      return xss(bbCodeParser.parse(this.content));
     },
   },
 };
