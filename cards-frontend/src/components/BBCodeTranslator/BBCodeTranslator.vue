@@ -13,7 +13,13 @@ export default {
   computed: {
     compiledContent() {
       let xss = require("xss");
-      return xss(bbCodeParser.parse(this.content));
+      let bbcode = bbCodeParser.parse(this.content);
+      //return bbCodeParser.parse(this.content);
+      bbcode = bbcode.replaceAll('<span style="color:', '<font color="');
+      bbcode = bbcode.replaceAll("</span>", "</font>");
+      console.log(bbcode);
+
+      return xss(bbcode);
     },
   },
 };
