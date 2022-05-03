@@ -498,7 +498,9 @@ export default createStore({
       } catch (error) {
         //console.log(error.response);
         //alert(error.response.data["error"]);
-				alert("Uploading card failed! Please try to sign in or reduce your file size to less than 1000,000 bytes. ");
+        alert(
+          "Uploading card failed! Please try to sign in or reduce your file size to less than 1000,000 bytes. "
+        );
       }
       commit("changeUploadingCard", false);
     },
@@ -649,8 +651,11 @@ export default createStore({
         })
           .then((res) => res.blob())
           .then((blob) => {
-            var file = window.URL.createObjectURL(blob);
-            window.location.assign(file);
+            const link = document.createElement("a");
+            link.href = window.URL.createObjectURL(blob);
+            link.download = "downloadFile";
+            link.click();
+            //window.location.assign(file);
           });
       } catch (error) {
         alert(

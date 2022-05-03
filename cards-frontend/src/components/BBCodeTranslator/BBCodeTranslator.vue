@@ -17,7 +17,6 @@ export default {
       //return bbCodeParser.parse(this.content);
       bbcode = bbcode.replaceAll('<span style="color:', '<font color="');
       bbcode = bbcode.replaceAll("</span>", "</font>");
-      console.log(bbcode);
 
       return xss(bbcode);
     },
