@@ -1,5 +1,5 @@
 # cards
-This is a comment website focusing on web security and a bit of design.
+This is a commenting website focusing on web security and a bit of design.
 
 ## Website
 <https://cards.fluffy-pony.com/allcards>
